@@ -21,8 +21,10 @@ func main() {
 
 	// Affichage des livres
 	for _, book := range library {
-		fmt.Printf("📘 Titre: %s | Auteur: %s | ID: %d | Disponible: %t\n",
-			book.Title, book.Author, book.ID, book.IsAvailable)
+		fmt.Printf("Livre: %d\n", book.ID)
+		fmt.Printf("Titre: %s\n", book.Title)
+		fmt.Printf("Auteur: %s\n", book.Author)
+		fmt.Printf("Disponible: %t\n", book.IsAvailable)
 	}
 
 }
