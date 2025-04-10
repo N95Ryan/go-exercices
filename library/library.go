@@ -10,6 +10,20 @@ type Book struct {
 	IsAvailable bool
 }
 
+type Library struct {
+	Books []Book
+}
+
+// Méthode pour ajouter un livre
+func (l *Library) AddBook(book Book) {
+	l.Books = append(l.Books, book)
+}
+
+// Méthode pour retirer un livre
+func (l *Library) RemoveBook(id int) {
+	l.Books = append(l.Books[:id], l.Books[id+1:]...)
+}
+
 func main() {
 	// Création de plusieurs livres
 	book1 := Book{Title: "The Great Gatsby", Author: "F. Scott Fitzgerald", ID: 1, IsAvailable: true}
