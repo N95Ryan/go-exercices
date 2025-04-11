@@ -1,0 +1,55 @@
+
+📘 Exercice : Gestion d'une bibliothèque
+
+🎯 Objectif :
+Manipuler des structs en Go pour représenter une bibliothèque de livres avec des opérations simples.
+
+---
+
+🧱 1. Crée une struct `Book` avec les champs suivants :
+- Title (string)
+- Author (string)
+- ID (int)
+- IsAvailable (bool)
+
+---
+
+🏛️ 2. Crée une struct `Library` avec :
+- Books []Book (un slice de livres)
+
+---
+
+🛠️ 3. Implémente les méthodes suivantes sur la struct `Library` :
+- AddBook(book Book) → ajoute un livre à la bibliothèque
+- ListAvailableBooks() → affiche tous les livres disponibles
+- FindBooksByAuthor(author string) → affiche les livres d’un auteur donné
+- BorrowBook(title string) → met IsAvailable à false pour un livre emprunté
+- ReturnBook(title string) → met IsAvailable à true pour un livre rendu
+
+---
+
+🧪 Exemple attendu :
+
+lib := Library{}
+
+lib.AddBook(Book{"1984", "George Orwell", 1949, true})
+lib.AddBook(Book{"L'Étranger", "Albert Camus", 1942, true})
+lib.AddBook(Book{"La Peste", "Albert Camus", 1947, true})
+
+lib.ListAvailableBooks()
+// Affiche les 3 livres
+
+lib.BorrowBook("1984")
+lib.ListAvailableBooks()
+// Affiche "L'Étranger" et "La Peste"
+
+lib.FindBooksByAuthor("Albert Camus")
+// Affiche les 2 livres de Camus
+
+lib.ReturnBook("1984")
+
+---
+
+✅ Bonus :
+- Ajouter une méthode RemoveBook(title string) pour supprimer un livre
+- Ajouter un champ ID (int) unique à chaque livre
