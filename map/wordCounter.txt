@@ -1,0 +1,40 @@
+# Exercice : Compteur de mots avec Maps en Go
+
+## Objectif
+
+Cet exercice vise à pratiquer l'utilisation des maps en Go en créant un compteur de mots.
+
+## Consignes
+
+1. Implémentez une fonction `CountWords` qui prend une chaîne de caractères en entrée et retourne une map où :
+
+   - Les clés sont les mots trouvés dans le texte
+   - Les valeurs sont le nombre d'occurrences de chaque mot
+
+2. La fonction doit :
+   - Ignorer la casse (majuscules/minuscules)
+   - Ignorer la ponctuation
+   - Gérer les espaces multiples
+
+## Exemple d'utilisation
+
+```go
+text := "Bonjour bonjour User, User ! Go Go! go..."
+result := CountWords(text)
+// Résultat attendu :
+// "bonjour": 2
+// "User": 2
+// "go": 3
+```
+
+## Bonus
+
+- Ajoutez une fonction pour afficher les résultats de manière triée
+- Ajoutez une fonction pour filtrer les mots par nombre minimum d'occurrences
+- Gérer les mots avec accents
+
+## Conseils
+
+- Utilisez le package `strings` pour la manipulation de texte
+- Pensez à utiliser `strings.ToLower()` pour normaliser la casse
+- Utilisez `strings.Fields()` pour une meilleure gestion des espaces
